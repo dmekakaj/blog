@@ -1,0 +1,21 @@
+<!-- code HTML éjecté dans la balise "app-post-list-component" du component principal -->
+<!-- Le string interpolation "{{}}" afin d'afficher nos variables du type script dans le component -->
+<!-- Le envent binding "()" a été choisi pour gérer le click des boutons (evenement venant du template) -->
+<!-- La directive par attribut "ngClass" nous permet de modifier dynamiquement les classes de chaque item des listes par rapport au love -->
+<!-- Le pipe "| date..." pour gérer dynamiquement le format des dates -->
+
+<li [ngClass]="{'list-group-item': true, 'list-group-item-success': loveIts > 0, 'list-group-item-danger': loveIts < 0}">
+
+	<!-- les doubles accolades -->
+	<header>
+		<h2>{{ title }}</h2>
+
+		<h4>{{ created_at | date: 'short'}}</h4>
+	</header>
+	
+	<p>{{ content }}</p>
+
+	<button class="btn btn-success" (click)="onLoveIt()">Love it({{ loveIt }})</button>
+
+	<button class="btn btn-danger" (click)="onDontLoveIt()">Don't love it({{ dontLoveIt }})</button>
+</li>

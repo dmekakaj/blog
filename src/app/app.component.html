@@ -1,0 +1,21 @@
+<!-- Code HTML ejcté dans la balise "app-root" de "index.html"-->
+<!-- La directive structurelle "*ngFor" permet de parcourir le tableau des posts dans "app.component.ts" -->
+<!-- En modifiant à chaque poste du tableau les attributs "title, content..." grace au "property binding" -->
+
+<h1>{{ title }}</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Posts</h2>
+      <ul class="list-group">
+        <app-post-list-component *ngFor="let post of myPosts"
+                                  [title]="post.title"
+                                  [content]="post.content"
+                                  [created_at]="post.created_at"
+        ></app-post-list-component>
+      </ul>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,16 @@
+/*Le fichier qui modifie le style du component "post-list-component"*/
+header
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+h4
+{
+	align-self: center;
+	font-style: italic;
+}
+
+li:hover{background-color: rgba(0, 0, 200, 0.3);}
+
+.btn-success{margin-right: 8px;}
